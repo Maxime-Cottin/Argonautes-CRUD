@@ -73,9 +73,6 @@ function App() {
 						{argoList.map((singleArgonaute: any) => (
 							<li key={singleArgonaute.id}>{singleArgonaute.data.name}</li>
 						))}
-						{argoList.map((singleArgonaute: any) => (
-							<li key={singleArgonaute.id}>{singleArgonaute.data.name}</li>
-						))}
 					</ul>
 				</div>
 				<img src={temple} alt="Temple" className="temple" />

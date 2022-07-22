@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap");
+.templeContainer {
+  position: static;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+.templeContainer .temple {
+  width: 80%;
+  max-width: 1150px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .templeContainer .temple {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .templeContainer {
+    position: relative;
+  }
+}
+
+.column {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+}
+.column:first-of-type {
+  left: 0;
+  transform: translate(-70%);
+}
+.column:last-of-type {
+  right: 0;
+  transform: translate(70%);
+}
+@media (min-width: 768px) {
+  .column {
+    display: none;
+  }
+}
+
+.floor {
+  background-color: #a68b67;
+  width: 100vw;
+  height: 20vh;
+}
+
+.argos {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 32px;
+  padding-bottom: 8%;
+  padding-top: 20%;
+  color: #fae3b9;
+}
+.argos form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.argos form label {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+}
+.argos form input {
+  font-size: 18px;
+  border: #fae3b9 1px solid;
+  background-color: transparent;
+}
+.argos form button {
+  background-color: #fae3b9;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+.argos ul {
+  list-style: none;
+  max-height: 225px;
+  overflow-y: scroll;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (max-width: 768px) {
+  .argos {
+    height: 100vh;
+    position: static;
+    padding-bottom: 0;
+    padding-top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .argos form {
+    margin: 0;
+  }
+  .argos ul {
+    text-align: center;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #92b7ee;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100vw;
+  color: #fae3b9;
+  font-weight: 100;
+  font-size: 12px;
+}
+footer a {
+  color: beige;
+}
+
+/*# sourceMappingURL=globals.css.map */

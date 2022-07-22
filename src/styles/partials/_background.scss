@@ -1,0 +1,40 @@
+.templeContainer {
+	position: static;
+	display: flex;
+	justify-content: center;
+	overflow-x: hidden;
+	.temple {
+		width: 80%;
+		max-width: 1150px;
+		display: none;
+		@media (min-width: 768px) {
+			display: block;
+		}
+	}
+	@media (min-width: 768px) {
+		position: relative;
+	}
+}
+
+.column {
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	&:first-of-type {
+		left: 0;
+		transform: translate(-70%);
+	}
+	&:last-of-type {
+		right: 0;
+		transform: translate(70%);
+	}
+	@media (min-width: 768px) {
+		display: none;
+	}
+}
+
+.floor {
+	background-color: #a68b67;
+	width: 100vw;
+	height: 20vh;
+}

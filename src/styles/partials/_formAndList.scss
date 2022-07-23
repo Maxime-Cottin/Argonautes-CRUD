@@ -4,28 +4,35 @@
 	width: 100%;
 	box-sizing: border-box;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items: flex-end;
+	align-items: center;
 	gap: 32px;
 	padding-bottom: 8%;
-	padding-top: 20%;
+	// padding-top: 20%;
 	color: $beige;
 	form {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 16px;
+		gap: 8px;
 		margin-bottom: auto;
-		margin-top: auto;
+		margin-top: 2.8%;
 		label {
 			text-align: center;
 			font-size: 24px;
 			font-weight: 900;
+			width: 200px;
+		}
+		.formInnerContainer {
+			display: flex;
+			gap: 16px;
 		}
 		input {
 			font-size: 18px;
 			border: $beige 1px solid;
 			background-color: transparent;
+			color: $beige;
 		}
 		button {
 			background-color: $beige;
@@ -38,23 +45,40 @@
 	ul {
 		list-style: none;
 		max-height: 225px;
-		overflow-y: scroll;
 		padding-left: 16px;
 		padding-right: 16px;
+		column-count: 3;
+		column-gap: 48px;
+	}
+	@media (max-width: 1280px) {
+		form {
+			gap: 0;
+			label {
+				font-size: 18px;
+				width: 150px;
+			}
+			input {
+				font-size: 14px;
+			}
+		}
 	}
 	@media (max-width: 768px) {
 		height: 100vh;
 		position: static;
 		padding-bottom: 0;
 		padding-top: 0;
-		flex-direction: column;
-		align-items: center;
 		justify-content: flex-end;
 		form {
 			margin: 0;
+			gap: 8px;
 		}
 		ul {
 			text-align: center;
+			overflow-y: scroll;
+			columns: auto;
+		}
+		.formInnerContainer {
+			flex-direction: column;
 		}
 	}
 }

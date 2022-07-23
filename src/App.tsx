@@ -66,12 +66,14 @@ function App() {
 				<div className="argos">
 					<form onSubmit={handleSave}>
 						<label htmlFor="name">Ajouter un argonaute :</label>
-						<input type="text" ref={argoRef} required />
-						<button type="submit">Ajouter</button>
+						<div className="formInnerContainer">
+							<input type="text" ref={argoRef} required />
+							<button type="submit">Ajouter</button>
+						</div>
 					</form>
 					<ul>
 						{argoList.map((singleArgonaute: any) => (
-							<li key={singleArgonaute.id}>{singleArgonaute.data.name}</li>
+							<li key={singleArgonaute.id}>- {singleArgonaute.data.name}</li>
 						))}
 					</ul>
 				</div>
